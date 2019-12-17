@@ -1,0 +1,29 @@
+body {
+    background-color: white;
+}
+
+h2 {
+    margin-bottom: 55px;
+}
+
+#passwordInput {
+    max-width: 960px;
+    margin: 0 auto;
+    padding-top: 25px;
+    background-color: white;
+    border: 1px solid grey;
+}
+
+#genPassword {
+    background-color: red;
+    color: white;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+#copy {
+    background-color: grey;
+    color: white;
+    padding: 5px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Password Generator</title>
+    <!--Link CSS and Javascrpt -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="container" id="passwordInput">
+        <h2>Generate a Password</h2>
+        <hr>
+        <form>
+            <div class="form-group">
+                <textarea class="form-control" readonly id="passwordBox" placeholder="Your Secure Password"
+                    aria-label="Generated Password" rows="3"></textarea>
+            </div>
+        </form>
+        <hr>
+
+        <button id="genPassword" onClick="genPassword()">Generate Password</button>
+
+        <button id="copy" onClick="copyPassword()" data-toggle="modal" data-target="#myModal">
+            Copy to Clipboard
+        </button>
+
+</body>
+
+</html>
