@@ -1,7 +1,7 @@
 # Password Generator - HW 3
 https://github.com/stevenrsewell/Password-Generator
 
-This is an application that generates a random password based on user-chosen criterea. The user also has an option to copy the password to the clipboard.
+This is an application that generates a random password based on user-chosen criteria. The user also has an option to copy the password to the clipboard.
 
 ## Dependencies Used
 <ol>
