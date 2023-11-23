@@ -1,5 +1,5 @@
-# Password Generator - HW 3
-https://github.com/stevenrsewell/Password-Generator
+# Password Generator
+[https://github.com/stevenrsewell/Password-Generator](https://stevenrsewell.github.io/Password-Generator/)
 
 This is an application that generates a random password based on user-chosen criteria. The user also has an option to copy the password to the clipboard.
 
