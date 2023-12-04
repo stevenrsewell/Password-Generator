@@ -25,6 +25,8 @@ function writePassword() {
   console.log(password);
   passwordText.value = password;
 
+  var copyBtn = document.querySelector("#copy");
+  copyBtn.style.display = "block";
 
 }
 
@@ -63,7 +65,7 @@ function generatePassword() {
     //Lower case values based on user confirm input
     lowerCaseValue = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     if (lowerCase) {
-      lowerCaseValue.forEach(function(option){
+      lowerCaseValue.forEach(function (option) {
         passwordValue.push(option)
       })
     }
@@ -71,7 +73,7 @@ function generatePassword() {
     // Uppercase values based on user input
     upperCaseValue = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
     if (upperCase) {
-      upperCaseValue.forEach(function(option){
+      upperCaseValue.forEach(function (option) {
         passwordValue.push(option)
       })
     }
@@ -79,7 +81,7 @@ function generatePassword() {
     // Numbers values based on user confirm input
     numbersValue = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
     if (numbers) {
-      numbersValue.forEach(function(option){
+      numbersValue.forEach(function (option) {
         passwordValue.push(option)
       })
     }
@@ -87,16 +89,16 @@ function generatePassword() {
     // Special Characters values based on user confirm input
     specialValue = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "{", "[", "}", "]", ":", ";", "'", "<", ">", "?", "/", "`", "~"];
     if (special) {
-      specialValue.forEach(function(option){
+      specialValue.forEach(function (option) {
         passwordValue.push(option)
       })
     }
 
   }
 
-// Create for loop that loops through criteria and concatenates them randomly
+  // Create for loop that loops through criteria and concatenates them randomly
   var newPassword = ""
-  for(var i = 0; i < length; i++){
+  for (var i = 0; i < length; i++) {
     newPassword += passwordValue[Math.floor(Math.random() * passwordValue.length)];
   }
 
@@ -108,3 +110,15 @@ function generatePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+// Add event listener to copy password button
+var copyBtn = document.querySelector("#copy");
+copyBtn.addEventListener("click", copyPassword);
+
+// Function to copy password to clipboard
+function copyPassword() {
+  var passwordText = document.querySelector("#password");
+  passwordText.select();
+  document.execCommand("copy");
+  alert("Password copied to clipboard!");
+}
